@@ -6,9 +6,6 @@ public class StringUtil {
         }
         char[] output = str.toCharArray();
         for (int start = 0, end = str.length() - 1; start < end; ) {
-            if (start >= end) {
-                break;
-            }
             if (!Character.isLetter(output[start])) {
                 start++;
             } else if ((!Character.isLetter(output[end]))) {
