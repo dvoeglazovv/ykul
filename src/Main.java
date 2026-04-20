@@ -1,6 +1,7 @@
 public class Main {
 
     static void main(String[] args) {
-        StringUtil.reverseLetters();
+        String reverse = StringUtil.reverseLetters("J@va the be$t!123");
+        System.out.println(reverse);
     }
 }

@@ -1,17 +1,23 @@
-import java.util.Scanner;
-
 public class StringUtil {
-    public static void reverseLetters() {
-        Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
-        char[] rev = new char[str.length()];
-        for (int start = 0, stop = str.length() - 1; start < str.length() && stop >= 0; start++, stop--) {
-            if (Character.isLetter(str.charAt(start))) {
-                rev[stop] = str.charAt(start);
+
+    public static String reverseLetters(String str) {
+        if (str == null || str.isEmpty()) {
+            return "";
+        }
+        char[] output = str.toCharArray();
+        for (int start = 0, end = str.length() - 1; start < end; ) {
+            if (!Character.isLetter(output[start])) {
+                start++;
+            } else if ((!Character.isLetter(output[end]))) {
+                end--;
             } else {
-                rev[start] = str.charAt(start);
+                char temp = output[start];
+                output[start] = output[end];
+                output[end] = temp;
+                start++;
+                end--;
             }
         }
-        System.out.println(new String(rev));
+        return new String(output);
     }
 }
