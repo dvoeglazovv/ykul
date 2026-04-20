@@ -1,3 +1,5 @@
+package com.example.util;
+
 public class StringUtil {
 
     public static String reverseLetters(String str) {
