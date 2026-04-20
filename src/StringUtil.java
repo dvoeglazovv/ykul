@@ -8,7 +8,7 @@ public class StringUtil {
         for (int start = 0, end = str.length() - 1; start < end; ) {
             if (!Character.isLetter(output[start])) {
                 start++;
-            } else if ((!Character.isLetter(output[end]))) {
+            } else if (!Character.isLetter(output[end])) {
                 end--;
             } else {
                 char temp = output[start];
