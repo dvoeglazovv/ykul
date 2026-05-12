@@ -1,4 +1,4 @@
-package com.example.util;
+package org.example.util;
 
 public class StringUtil {
 
